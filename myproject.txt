@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Library Management System</h1>
+        <nav>
+            <a href="#maintenance">Maintenance</a>
+            <a href="#reports">Reports</a>
+            <a href="#transactions">Transactions</a>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Login Page -->
+        <section id="login">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Login</button>
+            </form>
+        </section>
+
+        <!-- Maintenance Section (Admin Only) -->
+        <section id="maintenance">
+            <h2>Maintenance</h2>
+            <form id="addBookForm">
+                <label for="bookType">Type:</label>
+                <input type="radio" id="book" name="bookType" value="book" checked> Book
+                <input type="radio" id="movie" name="bookType" value="movie"> Movie
+
+                <label for="bookTitle">Title:</label>
+                <input type="text" id="bookTitle" name="bookTitle" required>
+
+                <label for="author">Author:</label>
+                <input type="text" id="author" name="author" required>
+
+                <button type="submit">Add Book</button>
+            </form>
+        </section>
+
+        <!-- Reports Section -->
+        <section id="reports">
+            <h2>Reports</h2>
+            <p>Generate and view reports here.</p>
+        </section>
+
+        <!-- Transactions Section -->
+        <section id="transactions">
+            <h2>Transactions</h2>
+
+            <!-- Issue Book -->
+            <h3>Issue Book</h3>
+            <form id="issueBookForm">
+                <label for="bookName">Book Name:</label>
+                <input type="text" id="bookName" name="bookName" required>
+
+                <label for="authorName">Author Name:</label>
+                <input type="text" id="authorName" name="authorName" readonly>
+
+                <label for="issueDate">Issue Date:</label>
+                <input type="date" id="issueDate" name="issueDate" required>
+
+                <label for="returnDate">Return Date:</label>
+                <input type="date" id="returnDate" name="returnDate" required>
+
+                <button type="submit">Issue Book</button>
+            </form>
+
+            <!-- Return Book -->
+            <h3>Return Book</h3>
+            <form id="returnBookForm">
+                <label for="returnBookName">Book Name:</label>
+                <input type="text" id="returnBookName" name="returnBookName" required>
+
+                <label for="serialNo">Serial No:</label>
+                <input type="text" id="serialNo" name="serialNo" required>
+
+                <label for="returnIssueDate">Issue Date:</label>
+                <input type="date" id="returnIssueDate" name="returnIssueDate" readonly>
+
+                <label for="finalReturnDate">Return Date:</label>
+                <input type="date" id="finalReturnDate" name="finalReturnDate" required>
+
+                <button type="submit">Return Book</button>
+            </form>
+
+            <!-- Pay Fine -->
+            <h3>Pay Fine</h3>
+            <form id="payFineForm">
+                <label for="finePaid">Fine Paid:</label>
+                <input type="checkbox" id="finePaid" name="finePaid">
+
+                <label for="remarks">Remarks:</label>
+                <input type="text" id="remarks" name="remarks">
+
+                <button type="submit">Pay Fine</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Library Management System &copy; 2025</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
